@@ -302,11 +302,13 @@ const Header = () => {
 					<ul className='mainnav__menulist'>
 						{menuData?.map((item, index) => (
 							<li className='mainnav__menuitem' key={index} onMouseEnter={() => handleMouseMovements("Enter")} onMouseLeave={() => handleMouseMovements("Leave")}>
-								{index != (menuData.length - 1) ? 
+								{/* {index != (menuData.length - 1) ? 
 								(<a className='mainnav__menulink' href="#" onMouseEnter={() => handleMouseMovementsLink("Link Enter")} onMouseLeave={() => handleMouseMovementsLink("Link Leave")}>{item.menuName}</a>) 
 								: (<a className='mainnav__menulink' href="#">{item.menuName}</a>)
-								}
+								} */}
+								<a className='mainnav__menulink' href="#">{item.menuName}</a>
 								{index != (menuData.length - 1) && (<MegaMenu megaMenuItem={item.subMenu} linkActive={linkActive} tag={index}/>)}
+								
 							</li>
 						))}
 					</ul>

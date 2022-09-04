@@ -6,19 +6,18 @@ const MegaMenu = ({megaMenuItem, linkActive, tag}) => {
   return (
     <div className='megamenu'>
       <ul className='megamenu__list'>
-        {tag}
         {megaMenuItem?.map((item, index) => (
-          <li className='megamenu__item' style={{width: `calc(100% / ${megaMenuItem.length})`}} key={index}>
+          <li className='megamenu__item' style={{width: `calc(110% / ${megaMenuItem.length})`}} key={index}>
             <a className='megamenu__link' href='#'>{item.subMenuName}</a>
-            {/* {item.subMenuChild.length > 0 && (
-              <ul>
+            {item.subMenuChild.length > 0 && (
+              <ul className='megamenu__sublist'>
                 {item.subMenuChild.map((item, index) => (
-                  <li key={index}>
-                    <a href="#">Link</a>
+                  <li className='megamenu__subitem' key={index}>
+                    <a className='megamenu__sublink' href="#">{item.subMenuChildName}</a>
                   </li>
                 ))}
               </ul>
-            )} */}
+            )}
           </li>
         ))}
       </ul>

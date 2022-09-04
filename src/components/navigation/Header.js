@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState } from 'react'
 import { Container } from '@mui/material'
 import CssBaseline from '@mui/material/CssBaseline';
 import MegaMenu from './MegaMenu';
@@ -10,234 +10,145 @@ const Header = () => {
 			subMenu: [
 				{
 					subMenuName: 'Ceo Message',
-					subMenuChild: [
-						{
-							subMenuChildName: 'Smart IC Chip'
-						},
-						{
-							subMenuChildName: 'Smart IC Chip'
-						},
-						{
-							subMenuChildName: 'Smart IC Chip'
-						}
-					]
+					subMenuChild: []
 				},
 				{
-					subMenuName: 'Our Company',
-					subMenuChild: [
-						{
-							subMenuChildName: 'Smart IC Chip'
-						},
-						{
-							subMenuChildName: 'Smart IC Chip'
-						},
-						{
-							subMenuChildName: 'Smart IC Chip'
-						}
-					]
+					subMenuName: 'Digital Communitaion Center',
+					subMenuChild: []
 				},
 				{
 					subMenuName: 'Global Network',
-					subMenuChild: [
-						{
-							subMenuChildName: 'Smart IC Chip'
-						},
-						{
-							subMenuChildName: 'Smart IC Chip'
-						},
-						{
-							subMenuChildName: 'Smart IC Chip'
-						}
-					]
+					subMenuChild: []
 				},
 				{
-					subMenuName: 'Ceo Message',
-					subMenuChild: [
-						{
-							subMenuChildName: 'Smart IC Chip'
-						},
-						{
-							subMenuChildName: 'Smart IC Chip'
-						},
-						{
-							subMenuChildName: 'Smart IC Chip'
-						}
-					]
+					subMenuName: 'History',
+					subMenuChild: []
 				},
 				{
-					subMenuName: 'Ceo Message',
-					subMenuChild: [
-						{
-							subMenuChildName: 'Smart IC Chip'
-						},
-						{
-							subMenuChildName: 'Smart IC Chip'
-						},
-						{
-							subMenuChildName: 'Smart IC Chip'
-						}
-					]
+					subMenuName: 'CI',
+					subMenuChild: []
+				},
+				{
+					subMenuName: 'Contact',
+					subMenuChild: []
 				}
 			]
 		},
 		{
 			menuName: 'Our Business',
-			// subMenu: [
-			// 	{
-			// 		subMenuName: 'Ceo Message',
-			// 		subMenuChild: [
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			},
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			},
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			},
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			}
-			// 		]
-			// 	},
-			// 	{
-			// 		subMenuName: 'Ceo Message',
-			// 		subMenuChild: [
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			},
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			},
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			},
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			}
-			// 		]
-			// 	},
-			// 	{
-			// 		subMenuName: 'Ceo Message',
-			// 		subMenuChild: [
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			},
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			},
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			},
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			}
-			// 		]
-			// 	},
-			// 	{
-			// 		subMenuName: 'Ceo Message',
-			// 		subMenuChild: [
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			},
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			},
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			},
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			}
-			// 		]
-			// 	},
-			// 	{
-			// 		subMenuName: 'Ceo Message',
-			// 		subMenuChild: [
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			},
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			},
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			},
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			}
-			// 		]
-			// 	},
-			// 	{
-			// 		subMenuName: 'Ceo Message',
-			// 		subMenuChild: [
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			},
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			},
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			},
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			}
-			// 		]
-			// 	},
-			// 	{
-			// 		subMenuName: 'Ceo Message',
-			// 		subMenuChild: [
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			},
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			},
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			},
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			}
-			// 		]
-			// 	},
-			// 	{
-			// 		subMenuName: 'Ceo Message',
-			// 		subMenuChild: [
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			},
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			},
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			},
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			}
-			// 		]
-			// 	},
-			// 	{
-			// 		subMenuName: 'Ceo Message',
-			// 		subMenuChild: [
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			},
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			},
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			},
-			// 			{
-			// 				subMenuChildName: 'Smart IC Chip'
-			// 			}
-			// 		]
-			// 	}
-			// ]
-			subMenu: []
+			subMenu: [
+				{
+					subMenuName: 'Digital Identification',
+					subMenuChild: [
+						{
+							subMenuChildName: 'Smart IC Chip'
+						},
+						{
+							subMenuChildName: 'Smart Card'
+						},
+						{
+							subMenuChildName: 'Electronic Card'
+						},
+						{
+							subMenuChildName: 'Authentication Service'
+						}
+					]
+				},
+				{
+					subMenuName: 'Payment Platform',
+					subMenuChild: [
+						{
+							subMenuChildName: 'Kona Payment Platform'
+						},
+						{
+							subMenuChildName: 'Kona Card'
+						},
+						{
+							subMenuChildName: 'Kona Benifits Card'
+						},
+						{
+							subMenuChildName: 'Kona Affiliate Card'
+						}
+					]
+				},
+				{
+					subMenuName: 'Local Communication Platform',
+					subMenuChild: [
+						{
+							subMenuChildName: 'Local Currency'
+						},
+						{
+							subMenuChildName: 'Local Community Service'
+						}
+					]
+				},
+				{
+					subMenuName: 'Mobility Platform',
+					subMenuChild: [
+						{
+							subMenuChildName: 'Mobility Platform'
+						},
+						{
+							subMenuChildName: 'Delivery Service'
+						},
+						{
+							subMenuChildName: 'Taxi Call Service'
+						},
+						{
+							subMenuChildName: 'Traditional Market Shopping Service'
+						}
+					]
+				},
+				{
+					subMenuName: 'Blockchain Platform',
+					subMenuChild: [
+						{
+							subMenuChildName: 'Blockchain Platform'
+						},
+						{
+							subMenuChildName: 'Daap Service'
+						}
+					]
+				},
+				{
+					subMenuName: 'Data Platform',
+					subMenuChild: [
+						{
+							subMenuChildName: 'Data Platform'
+						}
+					]
+				},
+				{
+					subMenuName: 'Healthcare Platform',
+					subMenuChild: [
+						{
+							subMenuChildName: 'Healthcare Platform'
+						}
+					]
+				},
+				{
+					subMenuName: 'IoT Platform',
+					subMenuChild: [
+						{
+							subMenuChildName: 'Kona DM and FOTA'
+						},
+						{
+							subMenuChildName: 'Kona Things Platform'
+						},
+						{
+							subMenuChildName: 'Kona AMI Platform'
+						}
+					]
+				},
+				{
+					subMenuName: 'Metaverse Platform',
+					subMenuChild: [
+						{
+							subMenuChildName: 'Kona Meta World'
+						}
+					]
+				}
+			]
 		},
 		{
 			menuName: 'IR',
@@ -255,7 +166,7 @@ const Header = () => {
 
 	const [lang, setLang] = useState('EN')
 	const [menuColor, setMenuColor] = useState('white')
-	const [linkActive, setLinkActive] = useState(false)
+	// const [linkActive, setLinkActive] = useState(false)
 
 	const handleLangChange = (lang) => {
 		console.log(lang);
@@ -265,26 +176,26 @@ const Header = () => {
 	const handleMouseMovements = (effect) => {
 		if (effect === 'Enter') {
 			setMenuColor('black')
-		}else{
+		} else {
 			setMenuColor('white')
 		}
 	}
 
-	const handleMouseMovementsLink = (effect) => {
-		console.log(effect);
-		if (effect === 'Link Enter') {
-			setLinkActive(true)
-		}else{
-			setLinkActive(false)
-		}
-	}
-  return (
-    <React.Fragment>
-      <CssBaseline />
-      <Container className={menuColor === 'white' ? 'mainnav' : 'mainnav mainnav--white'} maxWidth="false" sx={{ display: 'flex'}}>
-        <div className='mainnav__logoblc'>
-          <a href='#'>
-						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 27" style={{enableBackground: 'new 0 0 120 27'}} xmlSpace="preserve">
+	// const handleMouseMovementsLink = (effect) => {
+	// 	console.log(effect);
+	// 	if (effect === 'Link Enter') {
+	// 		setLinkActive(true)
+	// 	}else{
+	// 		setLinkActive(false)
+	// 	}
+	// }
+	return (
+		<React.Fragment>
+			<CssBaseline />
+			<Container className={menuColor === 'white' ? 'mainnav' : 'mainnav mainnav--white'} maxWidth="false" sx={{ display: 'flex' }}>
+				<div className='mainnav__logoblc'>
+					<a href='#'>
+						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 27" style={{ enableBackground: 'new 0 0 120 27' }} xmlSpace="preserve">
 							<g>
 								<g>
 									<path d="M78.8,24.5L91.2,1.6l12.3,22.9h-5.2l-7.1-14.1L84,24.5H78.8z M70.8,24.5V6.3H57.6v18.2H53V2.2h22.3v22.3H70.8z M44.4,13.4
@@ -297,28 +208,57 @@ const Header = () => {
 						</svg>
 
 					</a>
-        </div>
-        <div className='mainnav__menublc'>
+				</div>
+				<div className='mainnav__menublc'>
 					<ul className='mainnav__menulist'>
 						{menuData?.map((item, index) => (
-							<li className='mainnav__menuitem' key={index} onMouseEnter={() => handleMouseMovements("Enter")} onMouseLeave={() => handleMouseMovements("Leave")}>
+							<li 
+								className='mainnav__menuitem' 
+								key={index} 
+								onMouseEnter={() => handleMouseMovements("Enter")} 
+								onMouseLeave={() => handleMouseMovements("Leave")}
+							>
 								{/* {index != (menuData.length - 1) ? 
 								(<a className='mainnav__menulink' href="#" onMouseEnter={() => handleMouseMovementsLink("Link Enter")} onMouseLeave={() => handleMouseMovementsLink("Link Leave")}>{item.menuName}</a>) 
 								: (<a className='mainnav__menulink' href="#">{item.menuName}</a>)
 								} */}
-								<a className='mainnav__menulink' href="#">{item.menuName}</a>
-								{index != (menuData.length - 1) && (<MegaMenu megaMenuItem={item.subMenu} linkActive={linkActive} tag={index}/>)}
-								
+								<a 
+									className='mainnav__menulink' 
+									href="#"
+								>
+									<span>
+										{item.menuName}
+									</span>
+								</a>
+								{index !== (menuData.length - 1) && (<MegaMenu megaMenuItem={item.subMenu} tag={index} />)}
+
 							</li>
 						))}
 					</ul>
 				</div>
-        <div className='mainnav__langblc'>
-					{lang === 'EN' ? (<div className='mainnav__langwrp'><span className={lang === 'EN' ? 'mainnav__langwrp--active' : ''} onClick={() => handleLangChange('EN')}>EN</span><span className={lang === 'KR' ? 'mainnav__langwrp--active' : ''} onClick={() => handleLangChange('KR')}>KR</span></div>) : (<div className='mainnav__langwrp'><span className={lang === 'KR' ? 'mainnav__langwrp--active' : ''} onClick={() => handleLangChange('KR')}>KR</span><span className={lang === 'EN' ? 'mainnav__langwrp--active' : ''} onClick={() => handleLangChange('EN')}>EN</span></div>)}
+				<div className='mainnav__langblc'>
+					{lang === 'EN' ? 
+					(<div className='mainnav__langwrp'><span className={lang === 'EN' ? 'mainnav__langwrp--active' : ''} onClick={() => handleLangChange('EN')}>EN</span><span className={lang === 'KR' ? 'mainnav__langwrp--active' : ''} onClick={() => handleLangChange('KR')}>KR</span></div>) 
+					: 
+					(<div className='mainnav__langwrp'>
+						<span 
+							className={lang === 'KR' ? 'mainnav__langwrp--active' : ''} 
+							onClick={() => handleLangChange('KR')}
+							>
+								KR
+							</span>
+							<span 
+								className={lang === 'EN' ? 'mainnav__langwrp--active' : ''} 
+								onClick={() => handleLangChange('EN')}
+							>
+								EN
+							</span>
+						</div>)
+					}
 				</div>
-      </Container>
-    </React.Fragment>
-  )
+			</Container>
+		</React.Fragment>
+	)
 }
 
 export default Header

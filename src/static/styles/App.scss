@@ -1,19 +1,21 @@
 @import "variables";
 
-body{
-  background-color: gray !important;
-}
+// body{
+//   background-color: gray !important;
+// }
 
 .mainnav{
   position: relative !important;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to bottom,rgba(189,194,202,0.6), rgba(204,207,211,0.2));
+  // background: linear-gradient(to bottom,rgba(189,194,202,0.6), rgba(204,207,211,0.2));
+  background: transparent;
   color: #fff;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
   position: relative;
+  z-index: 2;
   &__logoblc{
     width: 120px;
     height: 26px;
@@ -45,9 +47,6 @@ body{
     margin: 0;
     padding: 0;
   }
-  // &__menuitem{
-  //   // padding: 20px 50px;
-  // }
   &__menulink{
     line-height: 40px;
     font-size: 18px;
@@ -120,17 +119,16 @@ body{
   padding: 0 60px;
   opacity: 0;
   text-align: center;
-  transition: opacity 0.1s, height 0.5s, visibility 0.1s;
-  -webkit-transition: opacity 0.1s, height 0.5s, visibility 0.1s;
-  // &--active{
-  //   opacity: 1;
-  //   height: 350px;
-  //   visibility: visible;
-  // }
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.2s ease-in-out, height 0.3s ease-out, opacity 0.4s ease-out, visibility 0.3s ease-out;
+  -webkit-transition: transform 0.2s ease-in-out, height 0.3s ease-out, opacity 0.4s ease-out, visibility 0.3s ease-out;
+ 
   &:hover{
     visibility: visible;
     opacity: 1;
     height: 400px;
+    transform: scaleY(1);
   }
   &__list{
     display: flex;
@@ -183,11 +181,53 @@ body{
   }
 }
 
+.megamenu__link{
+  color: var(--black-color);
+}
+
 
 .mainnav__menulink:hover ~ .megamenu{
   visibility: visible;
   opacity: 1;
   height: 400px;
+  transform: scaleY(1);  
 }
 
+
+//////////////Slider Css////////
+.mainslider{
+  margin-top: -80px;
+}
+.sliderwrap{
+  background-color: var(--primary-color);
+  padding-top: 80px;
+  .slick-list{
+    .slick-track{
+      .slick-slide{
+        position: relative;
+        min-height: 620px;
+      }
+    }
+  }
+  
+  &__listitem{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-25%, -50%);
+    max-width: 26%;
+  }
+  &__title{
+    font-size: 36px !important;
+    line-height: 1.5 !important;
+    color: var(--white-color);
+    // font-weight: 500 !important;
+    margin-bottom: 15px !important;
+  }
+  &__desc{
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+    color: var(--white-color);
+  }
+}
 

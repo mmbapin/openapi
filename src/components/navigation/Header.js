@@ -218,10 +218,6 @@ const Header = () => {
 								onMouseEnter={() => handleMouseMovements("Enter")} 
 								onMouseLeave={() => handleMouseMovements("Leave")}
 							>
-								{/* {index != (menuData.length - 1) ? 
-								(<a className='mainnav__menulink' href="#" onMouseEnter={() => handleMouseMovementsLink("Link Enter")} onMouseLeave={() => handleMouseMovementsLink("Link Leave")}>{item.menuName}</a>) 
-								: (<a className='mainnav__menulink' href="#">{item.menuName}</a>)
-								} */}
 								<a 
 									className='mainnav__menulink' 
 									href="#"
@@ -255,6 +251,9 @@ const Header = () => {
 							</span>
 						</div>)
 					}
+				</div>
+				<div className='mainnav__hmburgiconwrp'>
+
 				</div>
 			</Container>
 		</React.Fragment>

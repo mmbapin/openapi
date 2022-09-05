@@ -5,7 +5,8 @@
 // }
 
 .mainnav{
-  position: relative !important;
+  position: fixed !important;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,6 +17,9 @@
   -webkit-transition: all 0.5s;
   position: relative;
   z-index: 2;
+  @media (max-width: 1245px){
+    padding: 20px 50px;
+  }
   &__logoblc{
     width: 120px;
     height: 26px;
@@ -24,8 +28,17 @@
     }
   }
 
+  &__menublc{
+    @media (max-width: 1245px){
+      display: none;
+    }
+  }
+
   &__langwrp{
     color: var(--white-color);
+    @media (max-width: 1245px){
+      display: none;
+    }
     span{
       cursor: pointer;
       font-size: 14px;
@@ -37,6 +50,41 @@
     &--active{
       border-bottom: 1px solid #fff;
       padding-bottom: 2px;
+    }
+  }
+
+  &__hmburgiconwrp{
+    @media (min-width: 1246px){
+      display: none;
+    }
+    display: block;
+    position: relative;
+    z-index: 4;
+    width: 40px;
+    height: 15px;
+    &::before{
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 4px;
+      background: #fff;
+      -webkit-transition: top 0.2s,transform 0.2s;
+      transition: top 0.2s,transform 0.2s;
+    }
+    &::after{
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 4px;
+      background: #fff;
+      -webkit-transition: bottom 0.2s,transform 0.2s;
+      transition: bottom 0.2s,transform 0.2s;
     }
   }
 
@@ -123,7 +171,9 @@
   transform-origin: top;
   transition: transform 0.2s ease-in-out, height 0.3s ease-out, opacity 0.4s ease-out, visibility 0.3s ease-out;
   -webkit-transition: transform 0.2s ease-in-out, height 0.3s ease-out, opacity 0.4s ease-out, visibility 0.3s ease-out;
- 
+  @media (max-width: 1245px){
+    display: none;
+  }
   &:hover{
     visibility: visible;
     opacity: 1;
@@ -217,17 +267,10 @@
     transform: translate(-25%, -50%);
     max-width: 26%;
   }
-  &__title{
-    font-size: 36px !important;
-    line-height: 1.5 !important;
-    color: var(--white-color);
-    // font-weight: 500 !important;
-    margin-bottom: 15px !important;
-  }
-  &__desc{
-    font-size: 18px !important;
-    line-height: 1.6 !important;
-    color: var(--white-color);
-  }
+  // &__title{
+  //   color: var(--white-color);
+  // }
+  // &__desc{
+  // }
 }
 

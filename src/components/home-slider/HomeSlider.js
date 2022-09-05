@@ -9,8 +9,8 @@ const HomeSlider = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 3000,
-    autoplaySpeed: 3000,
+    speed: 4000,
+    autoplaySpeed: 4000,
     // cssEase: "linear",
     initialSlide: 0,
     className: "center sliderwrap",
@@ -67,10 +67,27 @@ const HomeSlider = () => {
         <Slider {...settings}>
           {sliderData?.map((item, index) => (
             <div className='sliderwrap__listitem'>
-              <Typography component='h1' className='sliderwrap__title'>
+              <Typography 
+                component='h1' 
+                className='sliderwrap__title'
+                sx={{
+                  fontSize: '36px',
+                  lineHeight: '1.5',
+                  marginBottom: '15px'
+                }}
+                color='#fff'
+                >
                 {item.title}
               </Typography>
-              <Typography component='p' className='sliderwrap__desc'>
+              <Typography 
+                component='p' 
+                className='sliderwrap__desc'
+                sx={{
+                  fontSize: '18px',
+                  lineHeight: '1.6'
+                }}
+                color='#fff'  
+              >
                 {item.desc}
               </Typography>
             </div>

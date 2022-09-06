@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Container } from '@mui/material'
 import CssBaseline from '@mui/material/CssBaseline';
 import MegaMenu from './MegaMenu';
@@ -168,6 +168,13 @@ const Header = () => {
 	const [menuColor, setMenuColor] = useState('white')
 	// const [linkActive, setLinkActive] = useState(false)
 
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll, { passive: true})
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+	};
+	}, [])
+
 	const handleLangChange = (lang) => {
 		console.log(lang);
 		setLang(lang)
@@ -180,6 +187,10 @@ const Header = () => {
 			setMenuColor('white')
 		}
 	}
+
+	const handleScroll = () => {
+    window.pageYOffset > 100 ?  setMenuColor('black') : setMenuColor('white')
+  }
 
 	// const handleMouseMovementsLink = (effect) => {
 	// 	console.log(effect);
@@ -253,7 +264,7 @@ const Header = () => {
 					}
 				</div>
 				<div className='mainnav__hmburgiconwrp'>
-
+					
 				</div>
 			</Container>
 		</React.Fragment>
